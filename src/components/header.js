@@ -1,14 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Link } from '@material-ui/core';
 
-function Header() {
+
+
+const Header = props => {
     return (
         <>
             <header>
                 <h1>OUR STORE</h1>
-                {/* <h2>CART</h2> */}
+                <Link className="a" color="primary" >
+                    CART ({props.cart.count})
+                </Link>
             </header>
         </>
     );
 }
 
-export default Header;
+const mapStateToProps = state => ({
+    cart: state.cart
+});
+
+
+export default connect(mapStateToProps)(Header);

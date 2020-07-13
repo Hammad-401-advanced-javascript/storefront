@@ -1,7 +1,7 @@
 # Project: Storefront
 
-## Phase 1
-**Virtual Store Phase 1: For this assignment, you will be starting the process of creating an e-Commerce storefront using React with Redux, coupled with your live API server**
+## Phase 2
+**Virtual Store Phase 2: Continue work on the e-Commerce storefront, breaking up the store into multiple reducers and sharing functionality/data between components**
 
 ## Author: Hammad Ali
 
@@ -15,4 +15,4 @@
 
 
 ## UML
-![image](./assets/redux.jpg)
+![image](./assets/combineReducer.jpg)
