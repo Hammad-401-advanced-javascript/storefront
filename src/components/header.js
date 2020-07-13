@@ -5,6 +5,7 @@ function Header() {
         <>
             <header>
                 <h1>OUR STORE</h1>
+                {/* <h2>CART</h2> */}
             </header>
         </>
     );

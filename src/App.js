@@ -1,20 +1,23 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 import Products from './components/products';
-import Categories from './components/categories';
+import Categories from './components/categories.js';
 import Header from './components/header';
 import Footer from './components/footer';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
-      <Categories />
-      <Products />
-      <Footer />
-    </div>
+    <>
+      <CssBaseline>
+        <Header />
+        <Categories />
+        <Products />
+        <Footer />
+      </CssBaseline>
+    </>
   );
 }
 

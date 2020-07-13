@@ -16,7 +16,6 @@ const Categories = props => {
 
 const mapStateToProps = state => ({
     categories: state.categories,
-    products: state.products
 });
 
 const mapDispatchToProps = { activate };
