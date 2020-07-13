@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,GACE,wBAAoC,CACpC,kBAA4B,CAC5B,UACF","file":"main.ed01d13f.chunk.css","sourcesContent":["h1 {\n  background-color: rgb(131, 247, 137);\n  box-shadow: rgb(62, 23, 235);\n  padding: 3%;\n}"]}
