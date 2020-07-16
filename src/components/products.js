@@ -1,4 +1,4 @@
-/* eslint-disable array-callback-return */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -19,52 +19,52 @@ import Container from '@material-ui/core/Container';
 
 
 const Products = props => {
-    return (
-        < Container maxWidth="md" component="main" >
-            {props.categories.products.map((product, idx) => {
-                if (product.category === props.categories.activeCategory) {
-                    return (
-                        < Grid>
-                            <Grid item xs={12} sm={6} md={4}>
-                                <Card>
+  return (
+    < Container maxWidth="md" component="main" >
+      {props.categories.products.map((product, idx) => {
+        if (product.category === props.categories.activeCategory) {
+          return (
+            < Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Card>
 
-                                    <CardHeader title={product.name}
-                                        titleTypographyProps={{ align: 'center' }}
-                                    />
-                                    <CardContent>
-                                        <Typography variant="h5" color="textPrimary">
-                                            Category: {product.category}
-                                        </Typography>
-                                        <Typography variant="h5" color="textPrimary">
-                                            Price: {product.price}$
-                                </Typography>
-                                        <Typography variant="h5" color="textPrimary">
-                                            inStock: {product.inStock}
-                                        </Typography>
+                  <CardHeader title={product.name}
+                    titleTypographyProps={{ align: 'center' }}
+                  />
+                  <CardContent>
+                    <Typography variant="h5" color="textPrimary">
+                      Category: {product.category}
+                    </Typography>
+                    <Typography variant="h5" color="textPrimary">
+                      Price: {product.price}$
+                    </Typography>
+                    <Typography variant="h5" color="textPrimary">
+                      inStock: {product.inStock}
+                    </Typography>
 
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button variant='outlined' color="primary">ADD TO CART</Button>
-                                        <Button variant='outlined' color="primary">VIEW DETAILS</Button>
+                  </CardContent>
+                  <CardActions>
+                    <Button variant='outlined' color="primary">ADD TO CART</Button>
+                    <Button variant='outlined' color="primary">VIEW DETAILS</Button>
 
-                                    </CardActions>
-                                </Card>
-                            </Grid>
+                  </CardActions>
+                </Card>
+              </Grid>
 
 
-                        </Grid>
-                    )
-                }
+            </Grid>
+          );
+        }
 
-            })}
-        </Container >
-    )
-}
+      })}
+    </Container >
+  );
+};
 
 
 
 const mapStateToProps = state => ({
-    categories: state.categories
+  categories: state.categories,
 });
 
 export default connect(mapStateToProps)(Products);
