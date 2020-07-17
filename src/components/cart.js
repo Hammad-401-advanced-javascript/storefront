@@ -1,31 +1,32 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button } from '@material-ui/core';
 import { Link } from '@material-ui/core';
-import { remove } from '../store/cart'
+import { remove } from '../store/cart';
 
 
 
 const Cart = props => {
-    return (
-        <div className='cart'>
-            {props.cart.products.map((product, idx) =>
-                <div key={idx}>
-                    <Link className="a" color="primary" onClick={() => props.add(product)} >
-                        {product}
-                    </Link>
-                    <Button onClick={() => props.remove(product)} >x</Button>
-                </div>
+  return (
+    <div className='cart'>
+      {props.cart.products.map((product, idx) =>
+        <div key={idx}>
+          <Link className="a" color="primary" onClick={() => props.add(product)} >
+            {product}
+          </Link>
+          <Button onClick={() => props.remove(product)} >x</Button>
+        </div>,
 
-            )}
-        </div>
+      )}
+    </div>
 
-    )
-}
+  );
+};
 
 
 const mapStateToProps = state => ({
-    cart: state.cart
+  cart: state.cart,
 });
 const mapDispatchToProps = { remove };
 
