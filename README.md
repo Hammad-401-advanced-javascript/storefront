@@ -15,4 +15,4 @@
 
 
 ## UML
-![image](./assets/combineReducer.jpg)
+![image](./assets/combineReducers.jpg)
